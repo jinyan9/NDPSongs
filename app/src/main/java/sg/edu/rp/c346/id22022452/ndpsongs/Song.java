@@ -17,6 +17,9 @@ public class Song {
         this.stars = stars;
     }
 
+    public static void add(Song obj) {
+    }
+
     public int getId() {
         return _id;
     }

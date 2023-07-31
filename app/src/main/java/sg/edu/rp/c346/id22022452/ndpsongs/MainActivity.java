@@ -50,9 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 int year = Integer.parseInt(editYear.getText().toString());
                 int stars = getSelectedStars();
 
-                int id = Integer.parseInt(editID.getText().toString());
-                Song song = new Song(id,title, singers, year, stars);
-                dbHelper.addSong(song);
+                dbHelper.addSong(title, singers, year, stars);
 
 
 
@@ -64,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void saveSong(View view) {
+        Intent intent = new Intent(MainActivity.this, SongActivity.class);
+        startActivity(intent);
+
     }
 
 
